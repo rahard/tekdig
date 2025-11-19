@@ -1,0 +1,38 @@
+% Set the physical paper size (stock) and the final cut size (trimmed)
+% This is common for US Trade Paperback (6" x 9")
+\setstocksize{9in}{6in}
+\settrimmedsize{9in}{6in}{*} 
+
+% Define the margins and text block size
+% {innermargin}{outermargin}{ratio/textheight}
+\setlrmarginsandblock{0.75in}{0.5in}{*} 
+% {topmargin}{bottommargin}{ratio/textwidth}
+\setulmarginsandblock{0.75in}{0.75in}{*} 
+
+% Finalize the layout settings
+\checkandfixthelayout
+
+
+
+% Set the standard chapter style (e.g., "pedersen" is clean and modern)
+%%\chapterstyle{pedersen}
+%%\chapterstyle{hangnum}
+%%\chapterstyle{companion}
+%%\chapterstyle{veelo}
+\chapterstyle{crosshead}
+%%\chapterstyle{bringhurst}
+
+% Customize section headings
+\setsecheadstyle{\large\bfseries\scshape}
+\setsubsecheadstyle{\normalsize\bfseries\itshape}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype} % Improves spacing for better justification
+
+% Example of a good book font (Palatino clone)
+\usepackage{mathpazo} 
+
+% Setup for a Bibliography (using BibLaTeX with Biber)
+\usepackage[style=authoryear, backend=biber]{biblatex}

@@ -1,0 +1,29 @@
+\documentclass[11pt,
+    twoside,      % For print (recto/verso)
+    openright,    % Chapters start on odd pages
+    oneside]{memoir} % A default layout option
+
+\usepackage{graphicx}
+% Load a separate file for custom settings and preamble
+\input{preamble}
+
+\begin{document}
+
+% Front Matter (uses roman numerals)
+\frontmatter
+\input{frontmatter/titlepage}
+\input{frontmatter/copyright}
+\tableofcontents*
+
+% Main Matter (uses arabic numerals)
+\mainmatter
+\input{chapters/1-pengantar}
+\input{chapters/2-pendahuluan}
+% ... more chapters ...
+
+% Back Matter (optional, often continues arabic numbering)
+\backmatter
+%%\input{backmatter/appendixA}
+%%\input{backmatter/index}
+
+\end{document}
